@@ -102,6 +102,10 @@ html {
     .navbar-collapse .nav-link {
         color: white !important;
     }
+
+    .name, .active-btn, .lead{
+        text-align: center;
+    }
 }
 
 .menu-underline {
@@ -163,9 +167,22 @@ html {
     align-items: center;
     font-weight: 600;
     margin-top: 10px;
+    font-size: larger;
 }
 
 .menu-short-desc {
     color: #777;
     font-size: 0.95rem;
+}
+
+.more-link{
+    font-size: larger;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.more-link:hover{
+    text-decoration: underline;
+    color: blue;
 }
