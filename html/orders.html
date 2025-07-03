@@ -1,0 +1,469 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nukkad Cafe | Order Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/menu.css">
+    <link rel="stylesheet" href="/css/orders.css">
+</head>
+
+<body>
+
+    <header>
+
+        <!-- Navbar -->
+        <nav id="mainNavbar" class="navbar navbar-expand-lg navbar-light navbar-scrolled">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Nukkad's Cafe</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="orderDropdown" role="button">Order/Book</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Order Now</a></li>
+                                <li><a class="dropdown-item" href="#">Book a Table</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+    <main>
+
+        <section class="menu">
+            <div class="container">
+                <div class="menu-header">
+                    <h1 class="menu-title mb-3 text-center" data-aos="zoom-in">Explore Our Menu</h1>
+                    <p class="menu-desc mb-5 text-center" data-aos="zoom-in">We serve delicious food made with love and
+                        fresh ingredients.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="categories">
+            <div class="container">
+
+                <div class="header-categories">
+
+                    <form action="" class="d-flex gap-1">
+                        <select name="categories" id="categories" class="form-control select-cat">
+                            <option value="Select the categories">search by Categories</option>
+                            <option value="dairy&breakfast">Dairy & Breakfast</option>
+                            <option value="Snacks & Chips">Snacks & Chips</option>
+                            <option value="Breverages">Breverages</option>
+                            <option value="Spices & Masala">Spices & Masala</option>
+                            <option value="Rice, Atta & Dal">Rice, Atta & Dal</option>
+                            <option value="Cooking oil & Ghee">Cooking oil & Ghee</option>
+                            <option value="Salt & sugar">Salt & Sugar</option>
+                            <option value="Beauty & hygiene">Beauty & hygiene</option>
+                            <option value="cleaning">cleaning</option>
+                            <option value="stationary">stationary</option>
+                            <option value="Men's Fashion">Men's Fashion</option>
+                            <option value="Women's Fashion">Women's Fashion</option>
+                            <option value="Footwear">Footwear</option>
+                            <option value="Electronics">Electronics</option>
+                            <option value="household">Household</option>
+                            <option value="other">Other</option>
+                        </select>
+
+                        <input type="search" name="search" placeholder="search here" class="form-control"
+                            class="search">
+                        <button class="btn btn-warning fw-bold">Search</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="order-status">
+            <div class="container">
+                <div class="mt-3 d-flex align-items-center justify-content-center gap-2">
+
+                    <!-- <a href="" class="btn btn-secondary w-25 fw-bold place-btn disabled">Update Order</a> -->
+                    <a href="" class="btn btn-success w-25 fw-bold bill-btn" data-bs-toggle="modal"
+                        data-bs-target="#get-bill-modal">Get Bills</a>
+
+                    <a href="" class="text-decoration-none text-black mx-3" data-bs-toggle="modal"
+                        data-bs-target="#cart-modal">
+                        <i class="fa-solid fa-cart-shopping cart-icon"></i>
+                        <span class="badge bg-danger" id="count">0</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="menu" class="d-flex align-items-center justify-content-center text-black section-full mt-4">
+            <div class="container">
+                <div class="product-header">
+                    <h1 class="menu-title mb-1 text-center" data-aos="zoom-in">All Food Items</h1>
+                    <div class="underline mx-auto mt-1 mb-4"></div>
+                </div>
+
+                <div class="row g-4 mb-5">
+                    <!-- Menu Card Start -->
+                    <div class="col-6 col-md-3" data-aos="fade-up">
+                        <div class="card menu-card h-100">
+                            <img src="/image/food/kadai-paneer.png" class="card-img-top" alt="Food Image">
+                            <div class="card-body">
+                                <div class="menu-name-price">
+                                    <span>Kadai Paneer</span>
+                                    <span>₹260</span>
+                                </div>
+                                <p class="menu-categories text-warning fw-bold">Panner</p>
+                                <p class="menu-short-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Quis, aut! Laborum quasi adipisci quod quibusdam suscipit rem, ea expedita sunt.</p>
+
+                                <div class="cart text-center">
+                                    <a href="" class="btn btn-outline-success">
+                                        <i class="fa-solid fa-cart-plus"></i>
+                                        Add to Cart
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-3" data-aos="fade-up">
+                        <div class="card menu-card h-100">
+                            <img src="/image/food/chana masala.png" class="card-img-top" alt="Food Image">
+                            <div class="card-body">
+                                <div class="menu-name-price">
+                                    <span>Chana Masala</span>
+                                    <span>₹200</span>
+                                </div>
+                                <p class="menu-categories text-warning fw-bold">Panner</p>
+                                <p class="menu-short-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Dolorem, tenetur. Dolor nulla praesentium, in inventore tempore culpa repudiandae
+                                    repellendus.
+                                </p>
+
+                                <div class="cart text-center">
+                                    <a href="" class="btn btn-outline-success">
+                                        <i class="fa-solid fa-cart-plus"></i>
+                                        Add to Cart
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-3" data-aos="fade-up">
+                        <div class="card menu-card h-100">
+                            <img src="/image/food/dal makhani.png" class="card-img-top" alt="Food Image">
+                            <div class="card-body">
+                                <div class="menu-name-price">
+                                    <span>Dal Makhani</span>
+                                    <span>₹200</span>
+                                </div>
+                                <p class="menu-categories text-warning fw-bold">Panner</p>
+                                <p class="menu-short-desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                    Neque dolor nesciunt, dicta cupiditate optio animi voluptatem soluta natus in a?
+                                </p>
+
+                                <div class="cart text-center">
+                                    <a href="" class="btn btn-outline-success">
+                                        <i class="fa-solid fa-cart-plus"></i>
+                                        Add to Cart
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-3" data-aos="fade-up">
+                        <div class="card menu-card h-100">
+                            <img src="/image/food/cheese burger.png" class="card-img-top" alt="Food Image">
+                            <div class="card-body">
+                                <div class="menu-name-price">
+                                    <span>Veg Cheese Burger</span>
+                                    <span>₹80</span>
+                                </div>
+                                <p class="menu-categories text-warning fw-bold">Panner</p>
+                                <p class="menu-short-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Aperiam dolor itaque unde dignissimos, pariatur rerum ex sequi modi provident
+                                    explicabo!
+                                </p>
+
+                                <div class="cart text-center">
+                                    <a href="" class="btn btn-outline-success">
+                                        <i class="fa-solid fa-cart-plus"></i>
+                                        Add to Cart
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-3" data-aos="fade-up">
+                        <div class="card menu-card h-100">
+                            <img src="/image/food/cheese sandwich.png" class="card-img-top" alt="Food Image">
+                            <div class="card-body">
+                                <div class="menu-name-price">
+                                    <span>Veg Cheese Sandwich</span>
+                                    <span>₹80</span>
+                                </div>
+                                <p class="menu-categories text-warning fw-bold">Panner</p>
+                                <p class="menu-short-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                    Molestiae ducimus fugit sunt dolores, labore ea reprehenderit esse ratione impedit
+                                    magni?
+                                </p>
+
+                                <div class="cart text-center">
+                                    <a href="" class="btn btn-outline-success">
+                                        <i class="fa-solid fa-cart-plus"></i>
+                                        Add to Cart
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-3" data-aos="fade-up">
+                        <div class="card menu-card h-100">
+                            <img src="/image/food/chilli panner.png" class="card-img-top" alt="Food Image">
+                            <div class="card-body">
+                                <div class="menu-name-price">
+                                    <span>Chilli Paneer</span>
+                                    <span>₹120</span>
+                                </div>
+                                <p class="menu-categories text-warning fw-bold">Panner</p>
+                                <p class="menu-short-desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                    Iste exercitationem, itaque eius in porro praesentium pariatur harum perferendis
+                                    fugiat animi.
+                                </p>
+
+                                <div class="cart text-center">
+                                    <a href="" class="btn btn-outline-success">
+                                        <i class="fa-solid fa-cart-plus"></i>
+                                        Add to Cart
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-3" data-aos="fade-up">
+                        <div class="card menu-card h-100">
+                            <img src="/image/food/pizza.png" class="card-img-top" alt="Food Image">
+                            <div class="card-body">
+                                <div class="menu-name-price">
+                                    <span>Cheese Pizza Large</span>
+                                    <span>₹200</span>
+                                </div>
+                                <p class="menu-categories text-warning fw-bold">Panner</p>
+                                <p class="menu-short-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Quaerat, ullam enim! Nisi, magnam? Tenetur harum similique perferendis vero nam
+                                    nisi!
+                                </p>
+
+                                <div class="cart text-center">
+                                    <a href="" class="btn btn-outline-success">
+                                        <i class="fa-solid fa-cart-plus"></i>
+                                        Add to Cart
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-3" data-aos="fade-up">
+                        <div class="card menu-card h-100">
+                            <img src="/image/food/Masala dosa.png" class="card-img-top" alt="Food Image">
+                            <div class="card-body">
+                                <div class="menu-name-price">
+                                    <span>Masala Dosa</span>
+                                    <span>₹70</span>
+                                </div>
+                                <p class="menu-categories text-warning fw-bold">Panner</p>
+                                <p class="menu-short-desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                    Itaque minus dolores assumenda nemo asperiores sunt veritatis enim unde ipsa
+                                    perspiciatis.
+                                </p>
+
+                                <div class="cart text-center">
+                                    <a href="" class="btn btn-outline-success">
+                                        <i class="fa-solid fa-cart-plus"></i>
+                                        Add to Cart
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- models designing for cart -->
+
+
+        <div class="modal fade" id="cart-modal" tabindex="-1" aria-labelledby="CartModelLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content shadow-lg rounded-4">
+                    <div class="modal-header bg-dark text-white">
+                        <h1 class="modal-title fs-5" id="CartModelLabel">🛒 Nukkad's Cafe</h1>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+
+                    <div class="modal-body px-4 py-3">
+                        <h4 class="text-center mb-3">🧾 Order Summary</h4>
+
+                        <div class="table-responsive mb-4">
+                            <table class="table table-bordered table-striped table-hover align-middle">
+                                <thead class="table-dark text-center">
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Name</th>
+                                        <th>Quantity</th>
+                                        <th>Price</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Kadai Paneer</td>
+                                        <td>1 full</td>
+                                        <td>₹260</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Veg Cheese Burger</td>
+                                        <td>1</td>
+                                        <td>₹80</td>
+                                    </tr>
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <td colspan="3" class="text-center fw-bold">Total</td>
+                                        <td class="fw-bold">₹340</td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer justify-content-center">
+                        <button type="button" class="btn btn-success fw-bold px-4" id="placeOrderBtn">Place
+                            Order</button>
+                        <button type="button" class="btn btn-secondary fw-bold px-4"
+                            data-bs-dismiss="modal">Back</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="modal fade" id="get-bill-modal" tabindex="-1" aria-labelledby="getBillModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content shadow-lg rounded-4">
+                    <div class="modal-header bg-dark text-white">
+                        <h1 class="modal-title fs-5" id="getBillModalLabel">🍽️ Nukkad's Cafe</h1>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+
+                    <div class="modal-body px-4 py-3">
+                        <form id="paymentForm">
+                            <label for="mobileNumber" class="form-label fw-semibold">📱 Mobile Number</label>
+                            <input type="tel" id="mobileNumber" class="form-control mb-3"
+                                placeholder="Enter mobile number" required>
+                        </form>
+
+                        <hr class="my-4">
+
+                        <h4 class="text-center mb-3">🧾 Order Summary</h4>
+                        <div class="table-responsive mb-4">
+                            <table class="table table-bordered table-striped table-hover align-middle">
+                                <thead class="table-dark text-center">
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Name</th>
+                                        <th>Quantity</th>
+                                        <th>Price</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Kadai Paneer</td>
+                                        <td>1 full</td>
+                                        <td>₹260</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Veg Cheese Burger</td>
+                                        <td>1</td>
+                                        <td>₹80</td>
+                                    </tr>
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <td colspan="3" class="text-center fw-bold">Total</td>
+                                        <td class="fw-bold">₹340</td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+
+                        <h5 class="text-center">💳 Choose & Make Payment</h5>
+                        <hr>
+                        <div class="d-flex justify-content-center gap-3">
+                            <button type="button" class="btn btn-outline-success fw-bold upi">Pay with UPI</button>
+                            <button type="button" class="btn btn-outline-secondary fw-bold cash">Pay with Cash</button>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer justify-content-center">
+                        <button type="button" class="btn btn-danger fw-bold px-4" data-bs-dismiss="modal">Back</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+
+</body>
+
+</html>
