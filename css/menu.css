@@ -1,0 +1,168 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    scroll-behavior: smooth;
+    background-color: rgb(208, 198, 180);
+}
+
+/* NAVBAR STYLING */
+.navbar {
+    transition: all 0.3s ease-in-out;
+    padding: 1rem 2rem;
+    background: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar-toggler {
+    background-color: white;
+    font-weight: bolder;
+}
+
+.navbar-scrolled {
+    position: fixed !important;
+    background-color: rgba(0, 0, 0, 0.85) !important;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-brand,
+.nav-link {
+    color: white !important;
+    transition: color 0.3s ease;
+}
+
+
+.nav-link {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 5px;
+    color: white !important;
+    margin-left: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #ffc107;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.nav-link:hover {
+    color: #ffc107 !important;
+}
+
+.dropdown-menu {
+    margin-top: 0;
+}
+
+/* Dropdown on hover (desktop only) */
+@media (min-width: 992px) {
+    .nav-item.dropdown:hover .dropdown-menu {
+        display: block;
+    }
+}
+
+/* Responsive override on smaller screens */
+@media (max-width: 991px) {
+    .navbar {
+        padding: 0.5rem 1rem;
+    }
+
+    .nav-link {
+        margin-left: 0;
+    }
+
+    .navbar-collapse .nav-link {
+        color: white !important;
+    }
+
+    .name,
+    .active-btn,
+    .lead {
+        text-align: center;
+    }
+}
+
+
+/* category section */
+.categories{
+    margin-top: -40px;
+}
+
+.categories .header-categories .select-cat {
+    width: 20%;
+}
+
+.categories .header-categories .btn {
+    width: 20%;
+}
+
+@media (max-width: 991px) {
+
+    .categories .header-categories .select-cat {
+        width: 50%;
+    }
+
+    .categories .header-categories .btn {
+        width: 50%;
+    }
+}
+
+/* menu */
+
+.menu-header {
+    text-align: center;
+    padding: 80px 0 20px;
+}
+
+.menu-header h1 {
+    font-weight: bold;
+    font-size: 3rem;
+    color: #2c3e50;
+}
+
+.underline {
+    width: 80px;
+    height: 4px;
+    background-color: #ff9900;
+    border-radius: 2px;
+}
+
+/* menu card items */
+
+.menu-card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.menu-name-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 700;
+    margin-top: 10px;
+    font-size: larger;
+}
+
+.menu-short-desc {
+    color: #777;
+    font-size: 0.95rem;
+    margin-top: -14px;
+}
+
+
